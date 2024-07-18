@@ -2,7 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Package2 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -24,7 +25,20 @@ const blogPosts = [
 
 const Index = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-8">
+      <header className="flex items-center justify-between mb-8">
+        <NavLink to="/" className="flex items-center gap-2 text-lg font-semibold">
+          <Package2 className="h-6 w-6" />
+          <span>Acme Inc</span>
+        </NavLink>
+        <nav className="flex items-center gap-4">
+          <NavLink to="/" className="text-sm font-medium hover:text-primary">
+            Home
+          </NavLink>
+          {/* Add more navigation items as needed */}
+        </nav>
+      </header>
+
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center space-x-6 mb-12">
           <Avatar className="w-24 h-24">
@@ -64,3 +78,4 @@ const Index = () => {
 };
 
 export default Index;
+        

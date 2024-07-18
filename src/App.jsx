@@ -1,8 +1,9 @@
+
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Layout from "./layouts/navbar"; // available: clean, navbar, sidebar
+import Layout from "./layouts/clean"; // Changed from navbar to clean
 import { navItems } from "./nav-items";
 
 const queryClient = new QueryClient();
@@ -27,3 +28,4 @@ const App = () => {
 };
 
 export default App;
+        
